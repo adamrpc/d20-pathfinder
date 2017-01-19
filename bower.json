@@ -1,0 +1,28 @@
+{
+  "name": "d20-pathfinder",
+  "main": "dist/d20-pathfinder.js",
+  "moduleType": "globals",
+  "ignore": [
+    "node_modules",
+    "**/.*",
+    "bower_components",
+    "test"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adamrpc/d20-pathfinder.git"
+  },
+  "dependencies": {
+    "angular": "^1.4.0",
+    "angular-route": "^1.4.0",
+    "lodash": "^4.13.1",
+    "d20-engine": "https://github.com/adamrpc/d20-engine.git"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.4.0"
+  },
+  "appPath": "app",
+  "resolutions": {
+    "angular": "^1.4.0"
+  }
+}
