@@ -6,8 +6,8 @@ angular.module('d20-pathfinder' ).factory( 'RaceHalfelin', function( AbstractRac
   race.description = '';
   race.stats = [ 'dex+2', 'cha+2', 'str-2' ];
   race.gifts = [
-    'size-P',
-    'speed-slow',
+    'size[P]',
+    'speed[slow]',
     'fearless',
     'halfelin-luck',
     'sharpened-sens',

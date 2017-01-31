@@ -6,7 +6,7 @@ angular.module('d20-pathfinder' ).factory( 'RaceDwarf', function( AbstractRace )
   race.description = '';
   race.stats = [ 'end+2', 'wis+2', 'cha-2' ];
   race.gifts = [
-    'size-M',
+    'size[M]',
     'slowly-but-surely',
     'night-vision',
     'greed',

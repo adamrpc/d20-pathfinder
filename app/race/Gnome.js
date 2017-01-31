@@ -6,8 +6,8 @@ angular.module('d20-pathfinder' ).factory('RaceGnome', function( AbstractRace ) 
   race.description = '';
   race.stats = [ 'end+2', 'cha+2', 'str-2' ];
   race.gifts = [
-    'size-P',
-    'speed-slow',
+    'size[P]',
+    'speed[slow]',
     'dark-vision',
     'defensive-training[giant]',
     'hatred[reptilian]',

@@ -6,8 +6,8 @@ angular.module('d20-pathfinder' ).factory( 'RaceHalfOrc', function( AbstractRace
   race.description = '';
   race.stats = [ 'any+2' ];
   race.gifts = [
-    'size-M',
-    'speed-normal',
+    'size[M]',
+    'speed[normal]',
     'night-vision',
     'intimidating',
     'orc-blood',

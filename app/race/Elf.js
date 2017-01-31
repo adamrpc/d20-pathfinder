@@ -6,8 +6,8 @@ angular.module('d20-pathfinder' ).factory( 'RaceElf', function( AbstractRace ) {
   race.description = '';
   race.stats = [ 'dex+2', 'int+2', 'end-2' ];
   race.gifts = [
-    'size-M',
-    'speed-normal',
+    'size[M]',
+    'speed[normal]',
     'dark-vision',
     'elfic-immunity',
     'elfic-magics',

@@ -6,8 +6,8 @@ angular.module('d20-pathfinder' ).factory( 'RaceHuman', function( AbstractRace )
   race.description = '';
   race.stats = [ 'any+2' ];
   race.gifts = [
-    'size-M',
-    'speed-normal',
+    'size[M]',
+    'speed[normal]',
     'any',
     'competent'
   ];
