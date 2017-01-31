@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('d20-pathfinder' ).run( function( StatLoader, StatLib, Charisma, Dexterity, Endurance, Intelligence, Strength, Wisdom ) {
+angular.module('d20-pathfinder' ).run( function( StatLoader, StatLib, StatCharisma, StatDexterity, StatEndurance, StatIntelligence, StatStrength, StatWisdom ) {
   var ID = 'pathfinder';
   var PathFinderStatLoader = function(){
     this.id = ID;
@@ -8,9 +8,9 @@ angular.module('d20-pathfinder' ).run( function( StatLoader, StatLib, Charisma, 
   PathFinderStatLoader.prototype.load = function() {
     var args = Array.from(arguments);
     var all = _.includes(args, StatLoader.ALL) || _.includes(args, ID);
-    _.forEach([Charisma, Dexterity, Endurance, Intelligence, Strength, Wisdom], function(race) {
-      if(all || _.includes(args, race.id)) {
-        StatLib.register(race.id, race);
+    _.forEach([StatCharisma, StatDexterity, StatEndurance, StatIntelligence, StatStrength, StatWisdom], function(stat) {
+      if(all || _.includes(args, stat.id)) {
+        StatLib.register(stat.id, stat);
       }
     });
   };

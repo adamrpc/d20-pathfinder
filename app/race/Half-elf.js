@@ -9,7 +9,7 @@ angular.module('d20-pathfinder' ).factory('RaceHalfElf', function( AbstractRace 
     'size-M',
     'speed-normal',
     'dark-vision',
-    'talent',
+    'talent[any]',
     'elfic-immunity',
     'elfic-blood',
     'human-blood',
