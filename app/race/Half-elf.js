@@ -1,20 +1,20 @@
 'use strict';
 
 angular.module('d20-pathfinder' ).factory('RaceHalfElf', function( AbstractRace ) {
-  var race = new AbstractRace( 'half-elf' );
+  var race = new AbstractRace( 'half_elf' );
   race.name = 'Half-elf';
   race.description = '';
   race.stats = [ 'any+2' ];
   race.gifts = [
     'size[M]',
-    'speed[normal]',
-    'dark-vision',
+    'dark_vision',
     'talent[any]',
-    'elfic-immunity',
-    'elfic-blood',
-    'human-blood',
-    'sharpened-sens',
-    'multiple-talents'
+    'elfic_immunity',
+    'blood[elf]',
+    'blood[human]',
+    'blood[half_elf]',
+    'sharpened_sens',
+    'multiple_talents'
   ];
   race.languages = [ 'common', 'elf' ];
   race.availableLanguages = [

@@ -7,15 +7,18 @@ angular.module('d20-pathfinder' ).factory('RaceGnome', function( AbstractRace ) 
   race.stats = [ 'end+2', 'cha+2', 'str-2' ];
   race.gifts = [
     'size[P]',
-    'speed[slow]',
-    'dark-vision',
-    'defensive-training[giant]',
+    'dark_vision',
+    'blood[gnome]',
+    'defensive_training[giant]',
     'hatred[reptilian]',
     'hatred[goblinoid]',
-    'gnome-magics',
+    'gnome_magics',
+    'free_bard_spell[animal_communication]',
+    'free_bard_spell[dancing_lights]',
+    'free_bard_spell[prestidigitation]',
+    'free_bard_spell[imaginary_sound]',
     'resistance[illusion]',
-    'sharpened-sens',
-    'war-weapon[gnome]'
+    'sharpened_sens'
   ];
   race.languages = [ 'common', 'gnome' ];
   race.availableLanguages = [ 'draconic', 'elf', 'giant', 'goblin', 'dwarf', 'orc' ];

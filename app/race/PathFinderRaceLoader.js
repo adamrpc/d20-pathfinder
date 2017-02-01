@@ -16,7 +16,7 @@ angular.module('d20-pathfinder' ).run( function( $log, GiftLib, StatLib, RaceLoa
           if(!matches) {
             $log.warn('Bad gift formatting (' + gift +') while loading race (' + race.id + '), loading anyway.');
           }
-          if(!GiftLib[matches[1]]) {
+          if(matches[1] !== 'any' && !GiftLib[matches[1]]) {
             $log.warn('Unkown gift (' + matches[1] + ') while loading race (' + race.id + '), loading anyway.');
           }
         });

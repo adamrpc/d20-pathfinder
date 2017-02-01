@@ -18,11 +18,15 @@ angular.module('d20-pathfinder' ).factory('GiftSize', function( Engine, Abstract
     if(type === 'stealth') {
       return -(index - 4) * 4;
     }
+    if(type === 'base_speed') {
+      return index;
+    }
   };
   var gift = new GiftSize( 'size' );
   gift.name = 'Size';
   gift.description = '';
   gift.conditions = ['gift(size!)'];
-  gift.bonuses = ['+CA', '+BMO', '+DMD', '+stealth'];
+  gift.hidden = true;
+  gift.bonuses = ['+CA', '+BMO', '+DMD', '+stealth', '+base_speed'];
   return gift;
 });

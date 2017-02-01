@@ -7,13 +7,12 @@ angular.module('d20-pathfinder' ).factory( 'RaceHalfelin', function( AbstractRac
   race.stats = [ 'dex+2', 'cha+2', 'str-2' ];
   race.gifts = [
     'size[P]',
-    'speed[slow]',
+    'blood[halfelin]',
     'fearless',
-    'halfelin-luck',
-    'sharpened-sens',
-    'good-balance',
-    'mastering[sling]',
-    'war-weapon[halfelin]'
+    'halfelin_luck',
+    'sharpened_sens',
+    'good_balance',
+    'weapon_mastering[sling]'
   ];
   race.languages = [ 'common', 'halfelin' ];
   race.availableLanguages = [ 'abyssal', 'elf',  'gnome', 'goblin', 'dwarf' ];
