@@ -30,7 +30,12 @@ describe('Factory: Gifts', function() {
     GiftElficMagics,
     GiftSharpenedSens,
     GiftGnomeMagics,
-    GiftFreeBardSpell) {
+    GiftFreeBardSpell,
+    GiftResistance,
+    GiftTalent,
+    GiftMultipleTalents,
+    GiftIntimidating,
+    GiftOrcFerocity) {
     loader = GiftLoader;
     log = $log;
     objs.push(GiftSize);
@@ -50,6 +55,11 @@ describe('Factory: Gifts', function() {
     objs.push(GiftSharpenedSens);
     objs.push(GiftGnomeMagics);
     objs.push(GiftFreeBardSpell);
+    objs.push(GiftResistance);
+    objs.push(GiftTalent);
+    objs.push(GiftMultipleTalents);
+    objs.push(GiftIntimidating);
+    objs.push(GiftOrcFerocity);
   } ) );
   it('Should load all races without warning', function() {
     spyOn(log, 'warn' ).and.callFake(console.log);

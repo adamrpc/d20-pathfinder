@@ -19,7 +19,12 @@ angular.module('d20-pathfinder' ).run( function(
   GiftElficMagics,
   GiftSharpenedSens,
   GiftGnomeMagics,
-  GiftFreeBardSpell) {
+  GiftFreeBardSpell,
+  GiftResistance,
+  GiftTalent,
+  GiftMultipleTalents,
+  GiftIntimidating,
+  GiftOrcFerocity) {
   var ID = 'pathfinder';
   var PathFinderGiftLoader = function(){
     this.id = ID;
@@ -44,7 +49,12 @@ angular.module('d20-pathfinder' ).run( function(
       GiftElficMagics,
       GiftSharpenedSens,
       GiftGnomeMagics,
-      GiftFreeBardSpell
+      GiftFreeBardSpell,
+      GiftResistance,
+      GiftTalent,
+      GiftMultipleTalents,
+      GiftIntimidating,
+      GiftOrcFerocity
     ], function(obj) {
       if(all || _.includes(args, obj.id)) {
         GiftLib.register(obj.id, obj);

@@ -6,6 +6,6 @@ angular.module('d20-pathfinder' ).factory('GiftFreeBardSpell', function( Engine,
   gift.description = '';
   gift.conditions = [];
   gift.hidden = true;
-  gift.bonuses = ['1j|NLS[#]=level', '1j|spellModifier[#]=stat[cha]'];
+  gift.bonuses = ['limit(1j)|NLS[#]=level;spellModifier[#]=stat[cha];spell(#)'];
   return gift;
 });
