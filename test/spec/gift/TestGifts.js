@@ -35,7 +35,11 @@ describe('Factory: Gifts', function() {
     GiftTalent,
     GiftMultipleTalents,
     GiftIntimidating,
-    GiftOrcFerocity) {
+    GiftOrcFerocity,
+    GiftFearless,
+    GiftHalfelinLuck,
+    GiftGoodBalance,
+    GiftCompetent) {
     loader = GiftLoader;
     log = $log;
     objs.push(GiftSize);
@@ -60,6 +64,10 @@ describe('Factory: Gifts', function() {
     objs.push(GiftMultipleTalents);
     objs.push(GiftIntimidating);
     objs.push(GiftOrcFerocity);
+    objs.push(GiftFearless);
+    objs.push(GiftHalfelinLuck);
+    objs.push(GiftGoodBalance);
+    objs.push(GiftCompetent);
   } ) );
   it('Should load all races without warning', function() {
     spyOn(log, 'warn' ).and.callFake(console.log);

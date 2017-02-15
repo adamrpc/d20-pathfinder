@@ -24,7 +24,11 @@ angular.module('d20-pathfinder' ).run( function(
   GiftTalent,
   GiftMultipleTalents,
   GiftIntimidating,
-  GiftOrcFerocity) {
+  GiftOrcFerocity,
+  GiftFearless,
+  GiftHalfelinLuck,
+  GiftGoodBalance,
+  GiftCompetent) {
   var ID = 'pathfinder';
   var PathFinderGiftLoader = function(){
     this.id = ID;
@@ -54,7 +58,11 @@ angular.module('d20-pathfinder' ).run( function(
       GiftTalent,
       GiftMultipleTalents,
       GiftIntimidating,
-      GiftOrcFerocity
+      GiftOrcFerocity,
+      GiftFearless,
+      GiftHalfelinLuck,
+      GiftGoodBalance,
+      GiftCompetent
     ], function(obj) {
       if(all || _.includes(args, obj.id)) {
         GiftLib.register(obj.id, obj);
