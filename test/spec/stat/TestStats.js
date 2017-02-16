@@ -2,17 +2,13 @@
 
 describe('Factory: Stats', function() {
   beforeEach( module( 'd20-pathfinder' ) );
-  var statLib = {
-    register: function(){}
-  };
+  var statLib;
   var log;
   var statLoader;
   var stats = [];
-  beforeEach(module(function ($provide) {
-    $provide.value('StatLib', statLib);
-  }));
   beforeEach( inject( function( StatLoader, $log, StatLib, StatCharisma, StatDexterity, StatEndurance, StatIntelligence, StatStrength, StatWisdom ) {
     statLoader = StatLoader;
+    statLib = StatLib;
     log = $log;
     stats.push(StatCharisma);
     stats.push(StatDexterity);
@@ -26,9 +22,10 @@ describe('Factory: Stats', function() {
     spyOn(statLib, 'register' );
     statLoader.load('all');
     expect(log.warn.calls.count() ).toBe(0);
-    expect(statLib.register.calls.count() ).toBe(stats.length);
-    _.forEach(stats, function(stat) {
-      expect(statLib.register).toHaveBeenCalledWith( stat.id, stat );
+    expect(_.keys(statLib.registered).length).toBe(stats.length);
+    _.forEach(stats, function(obj) {
+      expect(_.has(statLib.registered, obj.id)).toBe(true);
+      expect(statLib.registered[obj.id]).toBe(obj);
     });
   });
 });

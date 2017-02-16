@@ -2,18 +2,14 @@
 
 describe('Factory: Gifts', function() {
   beforeEach( module( 'd20-pathfinder' ) );
-  var giftLib = {
-    register: function(){}
-  };
-  var log;
+  var giftLib;
   var loader;
+  var log;
   var objs = [];
-  beforeEach(module(function ($provide) {
-    $provide.value('GiftLib', giftLib);
-  }));
   beforeEach( inject( function(
-    GiftLoader,
     $log,
+    GiftLib,
+    GiftLoader,
     GiftSize,
     GiftSlowlyButSurely,
     GiftDarkVision,
@@ -40,8 +36,9 @@ describe('Factory: Gifts', function() {
     GiftHalfelinLuck,
     GiftGoodBalance,
     GiftCompetent) {
-    loader = GiftLoader;
     log = $log;
+    giftLib = GiftLib;
+    loader = GiftLoader;
     objs.push(GiftSize);
     objs.push(GiftSlowlyButSurely);
     objs.push(GiftDarkVision);
@@ -69,14 +66,14 @@ describe('Factory: Gifts', function() {
     objs.push(GiftGoodBalance);
     objs.push(GiftCompetent);
   } ) );
-  it('Should load all races without warning', function() {
-    spyOn(log, 'warn' ).and.callFake(console.log);
-    spyOn(giftLib, 'register' );
+  it('Should load all gifts without warning', function() {
+    spyOn(log, 'warn').and.callFake( console.log );
     loader.load('all');
-    expect(log.warn.calls.count() ).toBe(0);
-    expect(giftLib.register.calls.count() ).toBe(objs.length);
+    expect(log.warn.calls.count()).toBe(0);
+    expect(_.keys(giftLib.registered).length).toBe(objs.length);
     _.forEach(objs, function(obj) {
-      expect(giftLib.register).toHaveBeenCalledWith( obj.id, obj );
+      expect(_.has(giftLib.registered, obj.id)).toBe(true);
+      expect(giftLib.registered[obj.id]).toBe(obj);
     });
   });
 });

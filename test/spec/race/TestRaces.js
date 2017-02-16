@@ -2,22 +2,18 @@
 
 describe('Factory: Races', function() {
   beforeEach( module( 'd20-pathfinder' ) );
-  var raceLib = {
-    register: function(){}
-  };
-  var log;
+  var raceLib;
   var giftLoader;
   var statLoader;
   var raceLoader;
+  var log;
   var races = [];
-  beforeEach(module(function ($provide) {
-    $provide.value('RaceLib', raceLib);
-  }));
-  beforeEach( inject( function( GiftLoader, StatLoader, RaceLoader, $log, RaceDwarf, RaceElf, RaceGnome, RaceHalfElf, RaceHalfOrc, RaceHalfelin, RaceHuman ) {
+  beforeEach( inject( function( $log, RaceLib, GiftLoader, StatLoader, RaceLoader, RaceDwarf, RaceElf, RaceGnome, RaceHalfElf, RaceHalfOrc, RaceHalfelin, RaceHuman ) {
+    log = $log;
+    raceLib = RaceLib;
     giftLoader = GiftLoader;
     statLoader = StatLoader;
     raceLoader = RaceLoader;
-    log = $log;
     races.push(RaceDwarf);
     races.push(RaceElf);
     races.push(RaceGnome);
@@ -29,13 +25,13 @@ describe('Factory: Races', function() {
   it('Should load all races without warning', function() {
     statLoader.load('all');
     giftLoader.load('all');
-    spyOn(log, 'warn' ).and.callFake(console.log);
-    spyOn(raceLib, 'register' );
+    spyOn(log, 'warn').and.callFake( console.log );
     raceLoader.load('all');
-    expect(log.warn.calls.count() ).toBe(0);
-    expect(raceLib.register.calls.count() ).toBe(races.length);
+    expect(log.warn.calls.count()).toBe(0);
+    expect(_.keys(raceLib.registered).length).toBe(races.length);
     _.forEach(races, function(race) {
-      expect(raceLib.register).toHaveBeenCalledWith( race.id, race );
+      expect(_.has(raceLib.registered, race.id)).toBe(true);
+      expect(raceLib.registered[race.id]).toBe(race);
     });
   });
 });
