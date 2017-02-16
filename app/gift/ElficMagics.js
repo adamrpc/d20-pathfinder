@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('d20-pathfinder' ).factory('GiftElficMagics', function( Engine, AbstractGift ) {
+angular.module('d20-pathfinder' ).factory('GiftElficMagics', function( AbstractGift ) {
   var gift = new AbstractGift( 'elfic_magics' );
   gift.name = 'Elfic magics';
   gift.description = '';

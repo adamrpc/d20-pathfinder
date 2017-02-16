@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('d20-pathfinder' ).factory('GiftWeaponMastering', function( Engine, AbstractGift ) {
+angular.module('d20-pathfinder' ).factory('GiftWeaponMastering', function( AbstractGift ) {
   var gift = new AbstractGift( 'weapon_mastering' );
   gift.name = 'Weapon mastering';
   gift.description = '';

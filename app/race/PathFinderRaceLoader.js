@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('d20-pathfinder' ).run( function( $log, GiftLib, StatLib, RaceLoader, RaceLib, RaceDwarf, RaceElf, RaceGnome, RaceHalfElf, RaceHalfOrc, RaceHalfelin, RaceHuman ) {
+angular.module('d20-pathfinder' ).run( function( RaceLoader, RaceLib, RaceDwarf, RaceElf, RaceGnome, RaceHalfElf, RaceHalfOrc, RaceHalfelin, RaceHuman ) {
   var ID = 'pathfinder';
   var PathFinderRaceLoader = function(){
     this.id = ID;

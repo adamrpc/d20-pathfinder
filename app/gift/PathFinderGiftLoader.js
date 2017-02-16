@@ -5,7 +5,7 @@ angular.module('d20-pathfinder' ).run( function(
   GiftLoader,
   GiftSize,
   GiftSlowlyButSurely,
-  GiftDarkVision,
+  GiftLowLightVision,
   GiftNightVision,
   GiftGreed,
   GiftBlood,
@@ -15,7 +15,7 @@ angular.module('d20-pathfinder' ).run( function(
   GiftHardy,
   GiftSteady,
   GiftWeaponMastering,
-  GiftElficImmunity,
+  GiftElvenImmunities,
   GiftElficMagics,
   GiftSharpenedSens,
   GiftGnomeMagics,
@@ -28,7 +28,7 @@ angular.module('d20-pathfinder' ).run( function(
   GiftFearless,
   GiftHalfelinLuck,
   GiftGoodBalance,
-  GiftCompetent) {
+  GiftSkilled) {
   var ID = 'pathfinder';
   var PathFinderGiftLoader = function(){
     this.id = ID;
@@ -39,7 +39,7 @@ angular.module('d20-pathfinder' ).run( function(
     _.forEach([
       GiftSize,
       GiftSlowlyButSurely,
-      GiftDarkVision,
+      GiftLowLightVision,
       GiftNightVision,
       GiftGreed,
       GiftBlood,
@@ -49,7 +49,7 @@ angular.module('d20-pathfinder' ).run( function(
       GiftHardy,
       GiftSteady,
       GiftWeaponMastering,
-      GiftElficImmunity,
+      GiftElvenImmunities,
       GiftElficMagics,
       GiftSharpenedSens,
       GiftGnomeMagics,
@@ -62,7 +62,7 @@ angular.module('d20-pathfinder' ).run( function(
       GiftFearless,
       GiftHalfelinLuck,
       GiftGoodBalance,
-      GiftCompetent
+      GiftSkilled
     ], function(obj) {
       if(all || _.includes(args, obj.id)) {
         GiftLib.register(obj.id, obj);

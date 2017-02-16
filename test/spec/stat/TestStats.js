@@ -6,13 +6,13 @@ describe('Factory: Stats', function() {
   var log;
   var statLoader;
   var stats = [];
-  beforeEach( inject( function( StatLoader, $log, StatLib, StatCharisma, StatDexterity, StatEndurance, StatIntelligence, StatStrength, StatWisdom ) {
+  beforeEach( inject( function( StatLoader, $log, StatLib, StatCharisma, StatDexterity, StatConstitution, StatIntelligence, StatStrength, StatWisdom ) {
     statLoader = StatLoader;
     statLib = StatLib;
     log = $log;
     stats.push(StatCharisma);
     stats.push(StatDexterity);
-    stats.push(StatEndurance);
+    stats.push(StatConstitution);
     stats.push(StatIntelligence);
     stats.push(StatStrength);
     stats.push(StatWisdom);

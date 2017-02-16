@@ -12,7 +12,7 @@ describe('Factory: Gifts', function() {
     GiftLoader,
     GiftSize,
     GiftSlowlyButSurely,
-    GiftDarkVision,
+    GiftLowLightVision,
     GiftNightVision,
     GiftGreed,
     GiftBlood,
@@ -22,7 +22,7 @@ describe('Factory: Gifts', function() {
     GiftHardy,
     GiftSteady,
     GiftWeaponMastering,
-    GiftElficImmunity,
+    GiftElvenImmunities,
     GiftElficMagics,
     GiftSharpenedSens,
     GiftGnomeMagics,
@@ -35,13 +35,13 @@ describe('Factory: Gifts', function() {
     GiftFearless,
     GiftHalfelinLuck,
     GiftGoodBalance,
-    GiftCompetent) {
+    GiftSkilled) {
     log = $log;
     giftLib = GiftLib;
     loader = GiftLoader;
     objs.push(GiftSize);
     objs.push(GiftSlowlyButSurely);
-    objs.push(GiftDarkVision);
+    objs.push(GiftLowLightVision);
     objs.push(GiftNightVision);
     objs.push(GiftGreed);
     objs.push(GiftBlood);
@@ -51,7 +51,7 @@ describe('Factory: Gifts', function() {
     objs.push(GiftHardy);
     objs.push(GiftSteady);
     objs.push(GiftWeaponMastering);
-    objs.push(GiftElficImmunity);
+    objs.push(GiftElvenImmunities);
     objs.push(GiftElficMagics);
     objs.push(GiftSharpenedSens);
     objs.push(GiftGnomeMagics);
@@ -64,7 +64,7 @@ describe('Factory: Gifts', function() {
     objs.push(GiftFearless);
     objs.push(GiftHalfelinLuck);
     objs.push(GiftGoodBalance);
-    objs.push(GiftCompetent);
+    objs.push(GiftSkilled);
   } ) );
   it('Should load all gifts without warning', function() {
     spyOn(log, 'warn').and.callFake( console.log );

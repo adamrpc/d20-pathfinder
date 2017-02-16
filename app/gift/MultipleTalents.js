@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('d20-pathfinder' ).factory('GiftMultipleTalents', function( Engine, AbstractGift ) {
+angular.module('d20-pathfinder' ).factory('GiftMultipleTalents', function( AbstractGift ) {
   var gift = new AbstractGift( 'multiple_talents' );
   gift.name = 'Multiple talents';
   gift.description = '';

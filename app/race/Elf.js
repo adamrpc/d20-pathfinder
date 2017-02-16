@@ -4,11 +4,11 @@ angular.module('d20-pathfinder' ).factory( 'RaceElf', function( AbstractRace ) {
   var race = new AbstractRace( 'elf' );
   race.name = 'Elf';
   race.description = '';
-  race.stats = [ 'dex+2', 'int+2', 'end-2' ];
+  race.stats = [ 'dex+2', 'int+2', 'con-2' ];
   race.gifts = [
     'size[M]',
-    'dark_vision',
-    'elfic_immunity',
+    'low_light_vision',
+    'elven_immunities',
     'elfic_magics',
     'sharpened_sens',
     'blood[elf]',

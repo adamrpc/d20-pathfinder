@@ -4,10 +4,10 @@ angular.module('d20-pathfinder' ).factory('RaceGnome', function( AbstractRace ) 
   var race = new AbstractRace( 'gnome' );
   race.name = 'Gnome';
   race.description = '';
-  race.stats = [ 'end+2', 'cha+2', 'str-2' ];
+  race.stats = [ 'con+2', 'cha+2', 'str-2' ];
   race.gifts = [
     'size[P]',
-    'dark_vision',
+    'low_light_vision',
     'blood[gnome]',
     'defensive_training[giant]',
     'hatred[reptilian]',

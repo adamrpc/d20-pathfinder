@@ -7,9 +7,9 @@ angular.module('d20-pathfinder' ).factory('RaceHalfElf', function( AbstractRace 
   race.stats = [ 'any+2' ];
   race.gifts = [
     'size[M]',
-    'dark_vision',
+    'low_light_vision',
     'talent[any]',
-    'elfic_immunity',
+    'elven_immunities',
     'blood[elf]',
     'blood[human]',
     'blood[half_elf]',

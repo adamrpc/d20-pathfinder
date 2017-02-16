@@ -9,7 +9,7 @@ angular.module('d20-pathfinder' ).factory( 'RaceHuman', function( AbstractRace )
     'size[M]',
     'blood[human]',
     'any',
-    'competent'
+    'skilled'
   ];
   race.languages = [ 'common' ];
   race.availableLanguages = [

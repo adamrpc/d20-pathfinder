@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('d20-pathfinder' ).factory('GiftGoodBalance', function( Engine, AbstractGift ) {
+angular.module('d20-pathfinder' ).factory('GiftGoodBalance', function( AbstractGift ) {
   var gift = new AbstractGift( 'good_balance' );
   gift.name = 'Good balance';
   gift.description = '';
