@@ -1,11 +1,11 @@
 'use strict';
 
-angular.module('d20-pathfinder' ).factory('GiftBlood', function( AbstractGift ) {
-  var gift = new AbstractGift( 'blood' );
-  gift.name = 'Blood';
-  gift.description = 'The race of the creature.';
-  gift.conditions = [];
-  gift.hidden = true;
-  gift.bonuses = ['race[#]+1'];
-  return gift;
+angular.module('d20-pathfinder' ).factory('FeatBlood', function( AbstractFeat ) {
+  var feat = new AbstractFeat( 'blood' );
+  feat.name = 'Blood';
+  feat.description = 'The race of the creature.';
+  feat.conditions = [];
+  feat.hidden = true;
+  feat.bonuses = ['race[#]+1'];
+  return feat;
 });

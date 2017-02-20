@@ -5,19 +5,19 @@ angular.module('d20-pathfinder' ).factory( 'RaceElf', function( AbstractRace ) {
   race.name = 'Elf';
   race.description = '';
   race.stats = [ 'dex+2', 'int+2', 'con-2' ];
-  race.gifts = [
+  race.feats = [
     'size[M]',
     'low_light_vision',
     'elven_immunities',
-    'elfic_magics',
-    'sharpened_sens',
+    'elven_magics',
+    'keen_senses',
     'blood[elf]',
-    'weapon_mastering[long_bow]',
-    'weapon_mastering[composite_long_bow]',
-    'weapon_mastering[bow]',
-    'weapon_mastering[composite_bow]',
-    'weapon_mastering[sword]',
-    'weapon_mastering[rapier]'
+    'weapon_proficiency[long_bow]',
+    'weapon_proficiency[composite_long_bow]',
+    'weapon_proficiency[bow]',
+    'weapon_proficiency[composite_bow]',
+    'weapon_proficiency[sword]',
+    'weapon_proficiency[rapier]'
   ];
   race.languages = [ 'common', 'elf' ];
   race.availableLanguages = [ 'celestial', 'draconic', 'gnoll', 'gnome', 'goblin', 'orc', 'sylvan' ];

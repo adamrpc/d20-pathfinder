@@ -1,11 +1,11 @@
 'use strict';
 
-angular.module('d20-pathfinder' ).factory('GiftGreed', function( AbstractGift ) {
-  var gift = new AbstractGift( 'greed' );
-  gift.name = 'Greed';
-  gift.description = '';
-  gift.conditions = [];
-  gift.hidden = true;
-  gift.bonuses = ['+estimation[metal]+2', '+estimation[gem]+2'];
-  return gift;
+angular.module('d20-pathfinder' ).factory('FeatGreed', function( AbstractFeat ) {
+  var feat = new AbstractFeat( 'greed' );
+  feat.name = 'Greed';
+  feat.description = 'Receive a bonus to determine the price of nonmagical goods that contain precious metals or gemstones.';
+  feat.conditions = [];
+  feat.hidden = true;
+  feat.bonuses = ['+appraise[metal]+2', '+appraise[gem]+2'];
+  return feat;
 });

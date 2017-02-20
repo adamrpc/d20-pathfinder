@@ -5,21 +5,21 @@ angular.module('d20-pathfinder' ).factory( 'RaceDwarf', function( AbstractRace )
   race.name = 'Dwarf';
   race.description = '';
   race.stats = [ 'con+2', 'wis+2', 'cha-2' ];
-  race.gifts = [
+  race.feats = [
     'size[M]',
-    'slowly_but_surely',
-    'night_vision',
+    'slow_and_steady',
+    'dark_vision',
     'greed',
     'blood[dwarf]',
-    'knowledge[rock]',
+    'stonecunning',
     'defensive_training[giant]',
     'hatred[orc]',
     'hatred[golinoid]',
     'hardy',
-    'steady',
-    'weapon_mastering[battle_axe]',
-    'weapon_mastering[heavy_war_peak]',
-    'weapon_mastering[war_hammer]'
+    'stability',
+    'weapon_proficiency[battle_axe]',
+    'weapon_proficiency[heavy_war_peak]',
+    'weapon_proficiency[war_hammer]'
   ];
   race.languages = [ 'common', 'dwarf' ];
   race.availableLanguages = [

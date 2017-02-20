@@ -5,16 +5,16 @@ angular.module('d20-pathfinder' ).factory( 'RaceHalfOrc', function( AbstractRace
   race.name = 'Half-orc';
   race.description = '';
   race.stats = [ 'any+2' ];
-  race.gifts = [
+  race.feats = [
     'size[M]',
-    'night_vision',
+    'dark_vision',
     'intimidating',
     'blood[half_orc]',
     'blood[orc]',
     'blood[human]',
     'orc_ferocity',
-    'weapon_mastering[great_axe]',
-    'weapon_mastering[2_handed_cimetery]'
+    'weapon_proficiency[great_axe]',
+    'weapon_proficiency[2_handed_cimetery]'
   ];
   race.languages = [ 'common', 'orc' ];
   race.availableLanguages = [ 'abyssal', 'draconic', 'giant', 'gnoll', 'goblin' ];

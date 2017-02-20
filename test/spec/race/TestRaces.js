@@ -3,15 +3,15 @@
 describe('Factory: Races', function() {
   beforeEach( module( 'd20-pathfinder' ) );
   var raceLib;
-  var giftLoader;
+  var featLoader;
   var statLoader;
   var raceLoader;
   var log;
   var races = [];
-  beforeEach( inject( function( $log, RaceLib, GiftLoader, StatLoader, RaceLoader, RaceDwarf, RaceElf, RaceGnome, RaceHalfElf, RaceHalfOrc, RaceHalfelin, RaceHuman ) {
+  beforeEach( inject( function( $log, RaceLib, FeatLoader, StatLoader, RaceLoader, RaceDwarf, RaceElf, RaceGnome, RaceHalfElf, RaceHalfOrc, RaceHalfling, RaceHuman ) {
     log = $log;
     raceLib = RaceLib;
-    giftLoader = GiftLoader;
+    featLoader = FeatLoader;
     statLoader = StatLoader;
     raceLoader = RaceLoader;
     races.push(RaceDwarf);
@@ -19,12 +19,12 @@ describe('Factory: Races', function() {
     races.push(RaceGnome);
     races.push(RaceHalfElf);
     races.push(RaceHalfOrc);
-    races.push(RaceHalfelin);
+    races.push(RaceHalfling);
     races.push(RaceHuman);
   } ) );
   it('Should load all races without warning', function() {
     statLoader.load('all');
-    giftLoader.load('all');
+    featLoader.load('all');
     spyOn(log, 'warn').and.callFake( console.log );
     raceLoader.load('all');
     expect(log.warn.calls.count()).toBe(0);

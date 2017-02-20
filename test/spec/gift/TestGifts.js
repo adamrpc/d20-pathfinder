@@ -1,79 +1,79 @@
 'use strict';
 
-describe('Factory: Gifts', function() {
+describe('Factory: Feats', function() {
   beforeEach( module( 'd20-pathfinder' ) );
-  var giftLib;
+  var featLib;
   var loader;
   var log;
   var objs = [];
   beforeEach( inject( function(
     $log,
-    GiftLib,
-    GiftLoader,
-    GiftSize,
-    GiftSlowlyButSurely,
-    GiftLowLightVision,
-    GiftNightVision,
-    GiftGreed,
-    GiftBlood,
-    GiftKnowledge,
-    GiftDefensiveTraining,
-    GiftHatred,
-    GiftHardy,
-    GiftSteady,
-    GiftWeaponMastering,
-    GiftElvenImmunities,
-    GiftElficMagics,
-    GiftSharpenedSens,
-    GiftGnomeMagics,
-    GiftFreeBardSpell,
-    GiftResistance,
-    GiftTalent,
-    GiftMultipleTalents,
-    GiftIntimidating,
-    GiftOrcFerocity,
-    GiftFearless,
-    GiftHalfelinLuck,
-    GiftGoodBalance,
-    GiftSkilled) {
+    FeatLib,
+    FeatLoader,
+    FeatSize,
+    FeatSlowAndSteady,
+    FeatLowLightVision,
+    FeatDarkVision,
+    FeatGreed,
+    FeatBlood,
+    FeatStonecunning,
+    FeatDefensiveTraining,
+    FeatHatred,
+    FeatHardy,
+    FeatStability,
+    FeatWeaponProficiency,
+    FeatElvenImmunities,
+    FeatElvenMagics,
+    FeatKeenSenses,
+    FeatGnomeMagics,
+    FeatFreeBardSpell,
+    FeatResistance,
+    FeatSkillFocus,
+    FeatMultitalented,
+    FeatIntimidating,
+    FeatOrcFerocity,
+    FeatFearless,
+    FeatHalflingLuck,
+    FeatSureFooted,
+    FeatSkilled) {
     log = $log;
-    giftLib = GiftLib;
-    loader = GiftLoader;
-    objs.push(GiftSize);
-    objs.push(GiftSlowlyButSurely);
-    objs.push(GiftLowLightVision);
-    objs.push(GiftNightVision);
-    objs.push(GiftGreed);
-    objs.push(GiftBlood);
-    objs.push(GiftKnowledge);
-    objs.push(GiftDefensiveTraining);
-    objs.push(GiftHatred);
-    objs.push(GiftHardy);
-    objs.push(GiftSteady);
-    objs.push(GiftWeaponMastering);
-    objs.push(GiftElvenImmunities);
-    objs.push(GiftElficMagics);
-    objs.push(GiftSharpenedSens);
-    objs.push(GiftGnomeMagics);
-    objs.push(GiftFreeBardSpell);
-    objs.push(GiftResistance);
-    objs.push(GiftTalent);
-    objs.push(GiftMultipleTalents);
-    objs.push(GiftIntimidating);
-    objs.push(GiftOrcFerocity);
-    objs.push(GiftFearless);
-    objs.push(GiftHalfelinLuck);
-    objs.push(GiftGoodBalance);
-    objs.push(GiftSkilled);
+    featLib = FeatLib;
+    loader = FeatLoader;
+    objs.push(FeatSize);
+    objs.push(FeatSlowAndSteady);
+    objs.push(FeatLowLightVision);
+    objs.push(FeatDarkVision);
+    objs.push(FeatGreed);
+    objs.push(FeatBlood);
+    objs.push(FeatStonecunning);
+    objs.push(FeatDefensiveTraining);
+    objs.push(FeatHatred);
+    objs.push(FeatHardy);
+    objs.push(FeatStability);
+    objs.push(FeatWeaponProficiency);
+    objs.push(FeatElvenImmunities);
+    objs.push(FeatElvenMagics);
+    objs.push(FeatKeenSenses);
+    objs.push(FeatGnomeMagics);
+    objs.push(FeatFreeBardSpell);
+    objs.push(FeatResistance);
+    objs.push(FeatSkillFocus);
+    objs.push(FeatMultitalented);
+    objs.push(FeatIntimidating);
+    objs.push(FeatOrcFerocity);
+    objs.push(FeatFearless);
+    objs.push(FeatHalflingLuck);
+    objs.push(FeatSureFooted);
+    objs.push(FeatSkilled);
   } ) );
-  it('Should load all gifts without warning', function() {
+  it('Should load all feats without warning', function() {
     spyOn(log, 'warn').and.callFake( console.log );
     loader.load('all');
     expect(log.warn.calls.count()).toBe(0);
-    expect(_.keys(giftLib.registered).length).toBe(objs.length);
+    expect(_.keys(featLib.registered).length).toBe(objs.length);
     _.forEach(objs, function(obj) {
-      expect(_.has(giftLib.registered, obj.id)).toBe(true);
-      expect(giftLib.registered[obj.id]).toBe(obj);
+      expect(_.has(featLib.registered, obj.id)).toBe(true);
+      expect(featLib.registered[obj.id]).toBe(obj);
     });
   });
 });
