@@ -6,6 +6,6 @@ angular.module('d20-pathfinder' ).factory('FeatSkillFocus', function( AbstractFe
   feat.description = 'The creature is particularly adept at #.';
   feat.conditions = [];
   feat.hidden = false;
-  feat.bonuses = ['skill(#).lvl<10|+#+3', 'skill(#).lvl>=10|+#+6'];
+  feat.bonuses = ['skill(#<10)|+#+3', 'skill(#>=10)|+#+6'];
   return feat;
 });

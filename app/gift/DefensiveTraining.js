@@ -6,6 +6,6 @@ angular.module('d20-pathfinder' ).factory('FeatDefensiveTraining', function( Abs
   feat.description = 'Gains AC bonus against creature of # subtype.';
   feat.conditions = [];
   feat.hidden = true;
-  feat.bonuses = ['AC_dodge[#]+4'];
+  feat.bonuses = ['AC[dodge(#)]+4'];
   return feat;
 });

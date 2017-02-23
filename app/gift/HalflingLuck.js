@@ -6,6 +6,6 @@ angular.module('d20-pathfinder' ).factory('FeatHalflingLuck', function( Abstract
   feat.description = 'Lucky for everything.';
   feat.conditions = [];
   feat.hidden = true;
-  feat.bonuses = ['+save+1'];
+  feat.bonuses = ['+save[any]+1'];
   return feat;
 });

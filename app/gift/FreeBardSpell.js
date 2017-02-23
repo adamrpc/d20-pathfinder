@@ -6,6 +6,6 @@ angular.module('d20-pathfinder' ).factory('FeatFreeBardSpell', function( Abstrac
   feat.description = 'Can cast # once a day if the creature charisma is greater than 11.';
   feat.conditions = ['stat(cha)>=11'];
   feat.hidden = true;
-  feat.bonuses = ['limit(1j)|NLS[#]=level;spellModifier[#]=stat[cha];spell(#)'];
+  feat.bonuses = ['limit(1j)|spell[cha(#)]'];
   return feat;
 });

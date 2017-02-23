@@ -3,12 +3,14 @@
 describe('Factory: Feats', function() {
   beforeEach( module( 'd20-pathfinder' ) );
   var featLib;
+  var skillLoader;
   var loader;
   var log;
   var objs = [];
   beforeEach( inject( function(
     $log,
     FeatLib,
+    SkillLoader,
     FeatLoader,
     FeatSize,
     FeatSlowAndSteady,
@@ -37,6 +39,7 @@ describe('Factory: Feats', function() {
     FeatSureFooted,
     FeatSkilled) {
     log = $log;
+    skillLoader = SkillLoader;
     featLib = FeatLib;
     loader = FeatLoader;
     objs.push(FeatSize);
@@ -68,6 +71,7 @@ describe('Factory: Feats', function() {
   } ) );
   it('Should load all feats without warning', function() {
     spyOn(log, 'warn').and.callFake( console.log );
+    skillLoader.load('all');
     loader.load('all');
     expect(log.warn.calls.count()).toBe(0);
     expect(_.keys(featLib.registered).length).toBe(objs.length);

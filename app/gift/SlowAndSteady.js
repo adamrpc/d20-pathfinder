@@ -6,6 +6,6 @@ angular.module('d20-pathfinder' ).factory('FeatSlowAndSteady', function( Abstrac
   feat.description = 'Reduce base speed, but the speed is never modified by armor or encumbrance.';
   feat.hidden = true;
   feat.conditions = [];
-  feat.bonuses = ['-base_speed-1', '!-inventory_speed', '!-armor_speed'];
+  feat.bonuses = ['-base_speed[racial]-1', '!-inventory_speed', '!-armor_speed'];
   return feat;
 });
