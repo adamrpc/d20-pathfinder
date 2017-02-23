@@ -18,7 +18,7 @@ describe('Factory: Stats', function() {
     stats.push(StatWisdom);
   } ) );
   it('Should load all races without warning', function() {
-    spyOn(log, 'warn' ).and.callFake(console.log);
+    spyOn(log, 'warn' ).and.callFake(console.debug);
     spyOn(statLib, 'register' );
     statLoader.load('all');
     expect(log.warn.calls.count() ).toBe(0);

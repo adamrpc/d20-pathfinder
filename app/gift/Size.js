@@ -7,11 +7,11 @@ angular.module('d20-pathfinder' ).factory('FeatSize', function( $log, AbstractFe
   FeatSize.prototype.bonus = function(creature, skill) {
     var matches = skill.match(/^([a-zA-Z_]+?|#)(\[((#|[a-zA-Z_]+?)|([a-zA-Z_]+)\((#|[a-zA-Z_]+?)\))])?$/);
     var result = {
-      base_bonus: 0,
+      baseBonus: 0,
       bonus: 0,
       malus: 0,
-      malus_limit: 0,
-      bonus_limit: 0
+      malusLimit: 0,
+      bonusLimit: 0
     };
     if(!matches) {
       $log.warn('Bad skill formatting (' + skill +') while computing bonus (' + this.id + '), returning 0.');
@@ -38,22 +38,22 @@ angular.module('d20-pathfinder' ).factory('FeatSize', function( $log, AbstractFe
     if(multipleBonuses) {
       return {
         any: {
-          base_bonus: 0,
+          baseBonus: 0,
           bonus: 0,
           malus: 0,
-          malus_limit: 0,
-          bonus_limit: 0
+          malusLimit: 0,
+          bonusLimit: 0
         },
         racial: {
-          base_bonus: bonus,
+          baseBonus: bonus,
           bonus: 0,
           malus: 0,
-          malus_limit: 0,
-          bonus_limit: 0
+          malusLimit: 0,
+          bonusLimit: 0
         }
       };
     }
-    result.base_bonus = bonus;
+    result.baseBonus = bonus;
     return result;
   };
   var feat = new FeatSize( 'size' );

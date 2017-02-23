@@ -17,7 +17,7 @@ describe('Factory: Skills', function() {
     objs.push(SkillAC);
   } ) );
   it('Should load all feats without warning', function() {
-    spyOn(log, 'warn').and.callFake( console.log );
+    spyOn(log, 'warn').and.callFake( console.debug );
     loader.load('all');
     expect(log.warn.calls.count()).toBe(0);
     expect(_.keys(skillLib.registered).length).toBe(objs.length);

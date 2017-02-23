@@ -25,7 +25,7 @@ describe('Factory: Races', function() {
   it('Should load all races without warning', function() {
     statLoader.load('all');
     featLoader.load('all');
-    spyOn(log, 'warn').and.callFake( console.log );
+    spyOn(log, 'warn').and.callFake( console.debug );
     raceLoader.load('all');
     expect(log.warn.calls.count()).toBe(0);
     expect(_.keys(raceLib.registered).length).toBe(races.length);

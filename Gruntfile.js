@@ -84,8 +84,7 @@ module.exports = function (grunt) {
     // Make sure code styles are up to par
     jscs: {
       options: {
-        config: '.jscsrc',
-        verbose: true
+        config: '.jscsrc'
       },
       all: {
         src: [
@@ -176,7 +175,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'newer:jshint',
-    'newer:jsinspect',
     'newer:jscs',
     'test',
     'build'

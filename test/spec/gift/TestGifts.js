@@ -70,7 +70,7 @@ describe('Factory: Feats', function() {
     objs.push(FeatSkilled);
   } ) );
   it('Should load all feats without warning', function() {
-    spyOn(log, 'warn').and.callFake( console.log );
+    spyOn(log, 'warn').and.callFake( console.debug );
     skillLoader.load('all');
     loader.load('all');
     expect(log.warn.calls.count()).toBe(0);

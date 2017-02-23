@@ -7,7 +7,7 @@ angular.module('d20-pathfinder' ).factory( 'SkillAC', function( AbstractSkill ) 
   skill.base = 10;
   skill.variants = {
     touch: ['armor', 'shield', 'natural'],
-    flat_footed: ['dodge', 'stat']
+    flatFooted: ['dodge', 'stat']
   };
   return skill;
 });

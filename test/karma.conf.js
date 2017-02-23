@@ -55,10 +55,11 @@ module.exports = function(config) {
     plugins: [
       'karma-chrome-launcher',
       'karma-spec-reporter',
+      'karma-mocha-reporter',
       'karma-jasmine'
     ],
 
-    reporters: ['spec'],
+    reporters: ['mocha'],
     specReporter: {
         maxLogLines: 10,         // limit number of lines logged per test
         suppressErrorSummary: true,  // do not print error summary
@@ -78,6 +79,11 @@ module.exports = function(config) {
     // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
     logLevel: config.LOG_INFO,
 
+    browserConsoleLogOptions: {
+      level: 'debug',
+      format: '%b %T: %m',
+      terminal: true
+    }
     // Uncomment the following lines if you are using grunt's server to run the tests
     // proxies: {
     //   '/': 'http://localhost:9000/'
